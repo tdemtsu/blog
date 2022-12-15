@@ -10,11 +10,11 @@ export default function AddArticle() {
         image: "",
         date: Timestamp.now().toDate(),
     })
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleImageChange = (e) => {
+    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       setFormData({ ...formData, image: e.target.files[0] });
     };
 
